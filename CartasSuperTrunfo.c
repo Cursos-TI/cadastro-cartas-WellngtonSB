@@ -51,8 +51,9 @@ int main() {
   // Calculos para Carta 1
   DensidadePopulacional = Populacao / AreaKM;
   PIBPercapita = PIB / Populacao;
+
   inversoDensidade = 1 / DensidadePopulacional;
-  SuperPoder = Populacao + AreaKM + PIB + PontosTuristicos + PIBPercapita + inversoDensidade ;
+  SuperPoder = (float)Populacao + AreaKM + PIB + (float)PontosTuristicos + PIBPercapita + inversoDensidade ;
    
 
   //Entrada de dados da segunda carta -----------------------------------------------------------------------------------------------------------------
@@ -81,9 +82,10 @@ int main() {
   // Calculos para Carta 2
   DensidadePopulacional2 = Populacao2 / AreaKM2;
   PIBPercapita2 = PIB2 / Populacao2;
+
   inversoDensidade2 = 1 / DensidadePopulacional2;
-  SuperPoder2 = Populacao2 + AreaKM2 + PIB2 + PontosTuristicos2 + PIBPercapita2 + inversoDensidade2; 
-  resultado = Populacao > Populacao2;
+  SuperPoder2 = (float)Populacao2 + AreaKM2 + PIB2 + (float)PontosTuristicos2 + PIBPercapita2 + inversoDensidade2; 
+ 
 
       //impressao dos dados cadastrados Carta 1
     printf("\n***** Carta 1 *****\n"); 
@@ -110,9 +112,10 @@ int main() {
     printf("Número de pontos turisticos: %d\n", PontosTuristicos2); 
     printf("Densidade Populacional %.2lf hab/km² \n", DensidadePopulacional2);
     printf("PIB per Capita %.2lf Reais \n", PIBPercapita2);
-    printf("Super Poder carta 2: %.2f\n", SuperPoder2);
+    printf("Super Poder carta 2: %.2f\n\n", SuperPoder2);
  
     // comparando as cartas
     printf("Comparação entre as cartas:\n");
-    printf("População: %d \n", resultado);
-     
+    printf("População: Carta 1 %d\n", resultado = Populacao > Populacao2);
+    
+} 
